@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: pink;
+    padding: 20px;   
+    /* Now add flexbox details */
+    display: flex;
+    /* default first */
+    flex-direction: row; 
+    /* flex-direction: row-reverse;  */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse' */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: stretch; /* default */
+}
+
+.item {
+    background-color: whitesmoke;
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    font-size: 40px;
+}
+
+.i2 {
+    height: 200px;
+    width: 200px;
+}
