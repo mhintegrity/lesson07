@@ -1,49 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
 h1 {
     /* font: 60px 'Charmonman', cursive; */
     font-family: 'Mali', cursive;
-    font-size: 60px;
+    font-size: 40px;
     font-style: italic;
     font-weight: bold;
 }
 
-img {
-    width: 300px;
-    height: auto;
-    margin: 15px;
-    filter: drop-shadow(16px 16px 20px);
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
-img:hover {
-    margin: 0px;
-    width: 330px;
+.card {
+    width: 290px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 6px 0px  rgba(0,0,0,0.3);
+} 
+
+.card img {
+    max-width: 100%;
+}
+
+.card .text {
+    padding: 0 20px 20px;
+}
+
+.card .text > button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.card:hover {
     transition-duration: 0.5s;
     transition-property: all;
-    transition-delay: 0.1s;
+    /* transition-delay: 0.1s; */
     transition-timing-function: ease;
+    box-shadow: 0px 0px 0px 0px  rgba(0,0,0,0.3);
 }
 
-body {
-    margin: 0;
-    background: darkslategray;
+button:hover {
+    box-shadow: 2px 2px 4px 0px  rgba(0,0,0,0.3);
 }
 
-.imageContainer {
-    display: flex;
-    flex-flow: row wrap;
-    flex: auto;
-}
-
-#pic0 {
-    /* This is a special image that changes to show the selected image */
-    display: none;
+#card1 {
     width: 600px;
-    height: auto;
-    margin: 15px;
-    filter: none;
 }
-
 
 @media only screen and (max-width: 600px) {
     /* Change the layout to be mobile friendly */
-
 }
