@@ -16,15 +16,17 @@ h1 {
 
 .cards {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
+/* The inital shadow is very small, look at .card:hover to see the card rise when the mouse hovers. */
 .card {
     width: 290px;
     margin: 10px;
     border: 1px solid #ccc;
-    box-shadow: 3px 3px 6px 0px  rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 3px 0px  rgba(0,0,0,0.3);
 } 
 
 .card img {
@@ -48,17 +50,40 @@ h1 {
     transition-property: all;
     /* transition-delay: 0.1s; */
     transition-timing-function: ease;
-    box-shadow: 0px 0px 0px 0px  rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 0px  rgba(0,0,0,0.3);
 }
 
+/* In order to show the user that the button can be pressed it rises using a shadow on hover */
 button:hover {
     box-shadow: 2px 2px 4px 0px  rgba(0,0,0,0.3);
 }
+ 
+@media only screen and (min-width: 960px) {
+    /* we have choosen to make one card larger then the others. */
+    /* Change the layout to be Wide screen friendly */
+    #card1 {
+        width: 600px;
+    }
+} 
 
-#card1 {
-    width: 600px;
-}
+@media only screen and (max-width: 580px) {
+    /* Change the layout to be mobile friendly */    
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-@media only screen and (max-width: 600px) {
-    /* Change the layout to be mobile friendly */
+    /* We do away with larger cards and treat them all the same */
+    .card {
+        width: 95%;
+        margin: 10px;
+        border: 1px solid white;
+        box-shadow: 0px 0px 0px 0px  rgba(0,0,0,0.3);
+    } 
+
+    h1 {
+        font-size: 30px
+    }
 }
